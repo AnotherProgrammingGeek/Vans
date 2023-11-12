@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import {Link} from "react-router-dom"
-import VanDetail from "../VanDetail/VanDetail"
 
 export default function Vans(props){
   let [vans, setVans] = useState([])
@@ -13,7 +12,7 @@ export default function Vans(props){
   let vanElements = vans.map(van => (
       <div key = {van.id} className="van-tile">
         <Link to={`../vans/${van.id}`}>
-          <img src={van.imageUrl}/>
+          <img src={van.imageUrl} alt="van"/>
           <div className="van-info">
             <h3>{van.name}</h3>
             <p>${van.price}<span>/day</span></p>
