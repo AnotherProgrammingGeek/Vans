@@ -1,16 +1,34 @@
 import React, { useEffect, useState } from "react"
-import {useParams} from "react-router-dom"
-export default function VanDetail(props){
-  let params = useParams()
-  let [van, setVan] = useState(null)
-  useEffect(()=>{
-  fetch(`/api/vans/${params.id}`)
-    .then(res => res.json())
-    .then(data => setVan(data.vans))
-  },[params.id])
-  console.log(van);
+import {Link, useLocation, useLoaderData} from "react-router-dom"
+import { getVans } from "../../api"
+
+export function loader({params}){
+  return getVans(params.id)
+}
+
+export default function VanDetail(){
+  // let [van, setVan] = useState(null)
+  let location = useLocation()
+  let van  = useLoaderData()
+  // console.log(location);
+  // useEffect(()=>{
+  // fetch(`/api/vans/${params.id}`)
+  //   .then(res => res.json())
+  //   .then(data => setVan(data.vans))
+  // },[params.id])
+
+  let type = location.state?.type || "all";
   return (
     <div className="van-detail-container">
+      <Link
+        to={
+          (location.state)? `..?${location.state.search}`
+          : ".."
+        }
+        relative="path"
+        className="back-button"
+        >&larr; <span>Back to {type} vans</span>
+        </Link>
       {
         van ?(
           <div className="van-detail">

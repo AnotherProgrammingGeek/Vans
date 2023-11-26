@@ -19,6 +19,10 @@ export default function Header(props){
             className = {
                 ({isActive})=> isActive ? "activeNav" : null
             } to="/vans">Vans</NavLink>
+        <NavLink
+            className = {
+                ({isActive})=> isActive ? "activeNav" : null
+            } to="/login">Login</NavLink>
       </nav>
     </header>
     </>
