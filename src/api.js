@@ -4,7 +4,7 @@ export async function getVans(id){
     const res = await fetch(url)
     if(!res.ok){
         
-        throw {
+        return {
             message: "Failed to fetch vans",
             statusText: res.statusText,
             status: res.status,
@@ -20,7 +20,7 @@ export async function getHostVans(id){
     const res = await fetch(url)
     if(!res.ok){
         
-        throw {
+        return {
             message: "Failed to fetch vans",
             statusText: res.statusText,
             status: res.status,

@@ -1,5 +1,5 @@
 // import { type } from "@testing-library/user-event/dist/type"
-import React, { useEffect, useState } from "react"
+// import React, { useEffect, useState } from "react"
 import {Link, useSearchParams,useLoaderData} from "react-router-dom"
 import { getVans } from "../../api"
 
@@ -9,7 +9,7 @@ export function loader(){
 
 export default function Vans(){
   let [searchParams, setSearchParams] = useSearchParams()
-  let [error, setError] = useState(null)
+  // let [error, setError] = useState(null)
   let typeFilter = searchParams.get("type")
   // console.log(searchParams.toString());
   let vans = useLoaderData()
