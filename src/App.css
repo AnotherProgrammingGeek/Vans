@@ -366,6 +366,8 @@ footer {
   background-color: white;
   padding: 24px;
   margin: 30px 26px;
+  margin-left: 0;
+  width: 100%;
 }
 
 .host-van-detail {

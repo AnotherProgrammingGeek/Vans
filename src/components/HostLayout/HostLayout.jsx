@@ -26,10 +26,6 @@ export default function HostLayout(props){
                 ({isActive}) => isActive ? navStyle : null
                 }
                 to= '/host/income'>Income</NavLink>
-            <NavLink style={
-                ({isActive}) => isActive ? navStyle : null
-                }
-                to= '/host/reviews'>Reviews</NavLink>
         </nav>
         <Outlet/>
     </>

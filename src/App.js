@@ -9,7 +9,7 @@ import "./server"
 import Layout from './components/Layout/Layout';
 import Dashboard from './pages/Host/Dashboard';
 import Income from './pages/Host/Income';
-import Reviews from './pages/Host/Reviews';
+// import Reviews from './pages/Host/Reviews';
 import HostLayout from './components/HostLayout/HostLayout';
 import HostVans , {loader as vanHostLoader}from './pages/Host/HostVans';
 import HostVansDetail from './pages/Host/HostVansDetail';
@@ -40,7 +40,7 @@ function App() {
             <Route path='photos' element = {<HostVanPhotos/>}/>
 
           </Route>
-          <Route path='reviews' element={<Reviews />} />
+          {/* <Route path='reviews' element={<Reviews />} /> */}
         </Route>
         <Route path='*' element= {<NotFound />}/>
 
