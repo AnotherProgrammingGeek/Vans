@@ -27,6 +27,7 @@ header {
   display: flex;
   align-items: center;
   padding-block: 10px;
+  flex-wrap: wrap;
 }
 
 header .site-logo {
@@ -319,6 +320,9 @@ footer {
   align-items: center;
   margin-top: auto;
   font-weight: 500;
+  position: relative;
+  bottom: 0;
+
 }
 
 .activeNav{
@@ -378,12 +382,12 @@ footer {
 .host-van-detail-info-text > h3 {
   margin-top: 24px;
   margin-bottom: 5px;
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 700;
 }
 
 .host-van-detail-info-text > h4 {
-  font-size: 20px;
+  font-size: 16px;
   margin-block: 0;
 }
 .host-van-detail-nav {
